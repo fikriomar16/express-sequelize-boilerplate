@@ -1,0 +1,91 @@
+{
+	"name": "express-sequelize-boilerplate",
+	"version": "0.1.0",
+	"description": "Express + Sequelize Boilerplate by @fikriomar16",
+	"author": "github.com/fikriomar16",
+	"license": "MIT",
+	"type": "module",
+	"packageManager": "yarn@3.3.0",
+	"imports": {
+		"#*": "./src/*"
+	},
+	"dependencies": {
+		"bcrypt": "^5.1.1",
+		"body-parser": "^1.20.2",
+		"cookie-parser": "^1.4.6",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"express": "^4.18.2",
+		"fastest-validator": "^1.17.0",
+		"jsonwebtoken": "^9.0.2",
+		"multer": "^1.4.5-lts.1",
+		"mysql2": "^3.9.1",
+		"pg": "^8.11.3",
+		"sequelize": "^6.37.1"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.23.9",
+		"@babel/core": "^7.23.9",
+		"@babel/plugin-transform-arrow-functions": "^7.23.3",
+		"@babel/plugin-transform-async-to-generator": "^7.23.3",
+		"@babel/plugin-transform-class-properties": "^7.23.3",
+		"@babel/plugin-transform-modules-commonjs": "^7.23.3",
+		"@babel/plugin-transform-object-rest-spread": "^7.23.4",
+		"@babel/plugin-transform-runtime": "^7.23.9",
+		"@babel/preset-env": "^7.23.9",
+		"@babel/preset-flow": "^7.23.3",
+		"@babel/preset-typescript": "^7.23.3",
+		"@babel/register": "^7.23.7",
+		"@babel/runtime": "^7.23.9",
+		"@jest/globals": "^29.7.0",
+		"@types/jest": "^29.5.12",
+		"babel-jest": "^29.7.0",
+		"babel-plugin-transform-import-meta": "^2.2.1",
+		"jest": "^29.7.0",
+		"sequelize-cli": "^6.6.2",
+		"supertest": "^6.3.4"
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-typescript",
+			"@babel/preset-flow",
+			[
+				"@babel/preset-env",
+				{
+					"targets": {
+						"esmodules": false,
+						"node": "current"
+					}
+				}
+			]
+		],
+		"plugins": [
+			"@babel/plugin-transform-arrow-functions",
+			"@babel/plugin-transform-async-to-generator",
+			"@babel/plugin-transform-class-properties",
+			"@babel/plugin-transform-object-rest-spread",
+			"@babel/plugin-transform-runtime",
+			[
+				"babel-plugin-transform-import-meta",
+				{
+					"module": "ES6"
+				}
+			]
+		]
+	},
+	"scripts": {
+		"dev": "node --watch --trace-warnings src/index.js",
+		"start": "node src/index.js",
+		"test": "NODE_ENV=test jest --testTimeout=10000",
+		"test:debug": "NODE_ENV=test jest --testTimeout=10000 --runInBand --detectOpenHandles",
+		"db:init": "yarn run sequelize-cli init",
+		"db:test:migration:user": "yarn run sequelize-cli model:generate --name user --attributes firstName:string,lastName:string,email:string,username:string,password:string",
+		"db:test:migrate": "yarn run sequelize-cli db:migrate",
+		"db:test:migrate:undo": "yarn run sequelize-cli db:migrate:undo",
+		"db:test:migrate:undo:all": "yarn run sequelize-cli db:migrate:undo:all",
+		"db:test:seed:user": "yarn run sequelize-cli seed:generate --name dummy-user",
+		"db:test:seed:all": "yarn run sequelize-cli db:seed:all",
+		"db:test:seed:undo": "yarn run sequelize-cli db:seed:undo",
+		"db:test:seed:undo:all": "yarn run sequelize-cli db:seed:undo:all"
+	}
+}
