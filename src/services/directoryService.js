@@ -8,10 +8,10 @@ const dirs = [
 export const checkDir = () => {
 	dirs.forEach(dir => {
 		if (fs.existsSync(dir)) {
-			console.log(`[EXISTS] [${dir}] Directory Already Exists`)
+			console.log(`[EXISTS] 🗂️ [${dir}] Directory Already Exists`)
 		} else {
 			fs.mkdirSync(dir)
-			console.log(`[CREATE] [${dir}] Directory Created`)
+			console.log(`[CREATE] 📂 [${dir}] Directory Created`)
 		}
 	})
 }
