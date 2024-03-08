@@ -6,7 +6,7 @@ import Sequelize from 'sequelize'
 import { env as _env } from 'process'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import database from '../config/database.js'
+import database from '#config/database.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const basename = _basename(fileURLToPath(import.meta.url))
