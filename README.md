@@ -10,6 +10,5 @@
 Add these lines to your settings.json
 
 ```
-"javascript.preferences.importModuleSpecifierEnding": "js",
-"typescript.preferences.importModuleSpecifierEnding": "js"
+"javascript.preferences.importModuleSpecifierEnding": "js"
 ```
