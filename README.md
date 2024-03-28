@@ -34,3 +34,19 @@ Add these lines to your settings.json
 
 - Run (Development)
 > *(npm/yarn/pnpm) dev*
+
+#### Configs
+- env
+|variable|value|
+|--------|-----|
+|`NODE_ENV`|`development/production/test`|
+|`APP_NAME`|`your app name`|
+|`APP_HOST`|`your app host`|
+|`APP_PORT`|`your app port`|
+|`ACCESS_TOKEN_SECRET`|`secret key for token`|
+|`REFRESH_TOKEN_SECRET`|`secret key for cookies`|
+|`DB_USERNAME_*`|`db username`|
+|`DB_PASSWORD_*`|`db password`|
+|`DB_DATABASE_*`|`db name`|
+|`DB_HOST_*`|`db host`|
+|`DB_PORT_*`|`db port`|
