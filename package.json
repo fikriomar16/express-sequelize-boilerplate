@@ -78,14 +78,14 @@
 		"start": "node src/index.js",
 		"test": "NODE_ENV=test jest --testTimeout=10000",
 		"test:debug": "NODE_ENV=test jest --testTimeout=10000 --runInBand --detectOpenHandles",
-		"db:init": "yarn run sequelize-cli init",
-		"db:test:migration:user": "yarn run sequelize-cli model:generate --name user --attributes firstName:string,lastName:string,email:string,username:string,password:string",
-		"db:test:migrate": "yarn run sequelize-cli db:migrate",
-		"db:test:migrate:undo": "yarn run sequelize-cli db:migrate:undo",
-		"db:test:migrate:undo:all": "yarn run sequelize-cli db:migrate:undo:all",
-		"db:test:seed:user": "yarn run sequelize-cli seed:generate --name dummy-user",
-		"db:test:seed:all": "yarn run sequelize-cli db:seed:all",
-		"db:test:seed:undo": "yarn run sequelize-cli db:seed:undo",
-		"db:test:seed:undo:all": "yarn run sequelize-cli db:seed:undo:all"
+		"db:init": "sequelize-cli init",
+		"db:test:migration:user": "sequelize-cli model:generate --name user --attributes firstName:string,lastName:string,email:string,username:string,password:string",
+		"db:test:migrate": "sequelize-cli db:migrate",
+		"db:test:migrate:undo": "sequelize-cli db:migrate:undo",
+		"db:test:migrate:undo:all": "sequelize-cli db:migrate:undo:all",
+		"db:test:seed:user": "sequelize-cli seed:generate --name dummy-user",
+		"db:test:seed:all": "sequelize-cli db:seed:all",
+		"db:test:seed:undo": "sequelize-cli db:seed:undo",
+		"db:test:seed:undo:all": "sequelize-cli db:seed:undo:all"
 	}
 }
