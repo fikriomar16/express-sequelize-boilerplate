@@ -37,6 +37,7 @@ Add these lines to your settings.json
 
 #### Configs
 - env
+
 |variable|value|
 |--------|-----|
 |`NODE_ENV`|`development/production/test`|
