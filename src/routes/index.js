@@ -12,6 +12,6 @@ routes.get('/', (req, res) => {
 		message: 'API Connected Successfully......'
 	})
 })
-routes.use('/test', testRoutes)
+if (process.env?.NODE_ENV?.toLowerCase() != 'production') routes.use('/test', testRoutes)
 
 export default routes
