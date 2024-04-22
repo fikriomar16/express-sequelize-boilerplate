@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser'
 import dotenv from 'dotenv'
 import { authDb } from '#services/connectionService.js'
 import { checkDir } from '#services/directoryService.js'
+import routes from '#routes/index.js'
 
 dotenv.config()
 
@@ -23,6 +24,7 @@ app.use((req, res, next) => {
 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, contentType,Content-Type, Accept, Authorization")
 	next()
 })
+app.use('/api', routes)
 
 const server = app.listen(APP_PORT, async () => {
 	await authDb()

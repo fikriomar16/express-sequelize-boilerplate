@@ -5,6 +5,7 @@ export const getAllUserData = async (limit = 10, offset = 0, where = {}, distinc
 		where: {
 			...where,
 		},
+		distinct,
 	})
 	return data
 }
